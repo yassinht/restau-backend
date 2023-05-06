@@ -1,0 +1,63 @@
+POST /menus
+
+{
+    "chefId": "610d8560d0b7f512b9c8d7f0",
+    "type": "dinner",
+    "platEntrer": "Salad",
+    "platPrincipal": "Steak with fries",
+    "dessert": "Chocolate cake",
+    "date": "2023-04-25"
+}
+
+Response Body:
+
+{
+    "menu": {
+        "_id": "61561f722e27a2be0128d4c4",
+        "chef": "610d8560d0b7f512b9c8d7f0",
+        "type": "dinner",
+        "platEntrer": "Salad",
+        "platPrincipal": "Steak with fries",
+        "dessert": "Chocolate cake",
+        "date": "2023-04-25T00:00:00.000Z",
+        "__v": 0
+    }
+}
+Update a menu:
+css
+Copy code
+PUT /menus/:id
+
+{
+    "chefId": "610d8560d0b7f512b9c8d7f0",
+    "type": "dejuner",
+    "platEntrer": "Soup",
+    "platPrincipal": "Grilled chicken with vegetables",
+    "dessert": "Fruit salad",
+    "date": "2023-04-26"
+}
+
+Response Body:
+
+{
+    "menu": {
+        "_id": "61561f722e27a2be0128d4c4",
+        "chef": "610d8560d0b7f512b9c8d7f0",
+        "type": "dejuner",
+        "platEntrer": "Soup",
+        "platPrincipal": "Grilled chicken with vegetables",
+        "dessert": "Fruit salad",
+        "date": "2023-04-26T00:00:00.000Z",
+        "__v": 0
+    }
+}
+Delete a menu:
+bash
+Copy code
+DELETE /menus/:id
+
+Response Body:
+
+{
+    "message": "Menu deleted"
+}
